@@ -1,37 +1,31 @@
 # SDA Assignment 3 – Real-Time BTC Trading Dashboard
 
 ## Project Overview
-This project demonstrates a real-time streaming data pipeline for BTC/USDT trading data using Apache Kafka, Python, MongoDB Atlas, and MongoDB Atlas Charts.
+This project demonstrates a real-time BTC/USDT trading data pipeline using Kafka, Python, MongoDB Atlas, and MongoDB Atlas Charts.
 
 ## Data Flow
 crypto_producer.py → Kafka (btc-live-trades) → mongo_consumer.py → MongoDB Atlas → MongoDB Atlas Charts
 
-## Components
-
-### 1. Kafka Producer
-`crypto_producer.py` generates simulated BTC/USDT trading events and publishes them to the Kafka topic `btc-live-trades`.
-
-### 2. Kafka Consumer
-`mongo_consumer.py` subscribes to the `btc-live-trades` topic, consumes the messages, and stores them in MongoDB Atlas.
-
-Database: `sda_course`  
-Collection: `live_trades`
-
-### 3. Dashboard
-The dashboard was created using MongoDB Atlas Charts.
-
-It contains:
-- BTC Price Over Time
-- BUY vs SELL Trade Value
-- Large Trades Over Time
-- Total Trade Value (USD)
+## Dashboard Visualizations
+1. BTC Price Over Time
+2. Large Trades Over Time
+3. BUY vs SELL Trade Value
+4. Total Trade Value (USD)
+5. Average Trade Value (USD)
+6. Large Trade Count
+7. BUY vs SELL Trade Value Over Time
 
 ## Technologies Used
 - Python
 - Apache Kafka
-- Docker
 - MongoDB Atlas
 - MongoDB Atlas Charts
 
-## Business Use
-The dashboard helps monitor BTC price movements, compare BUY and SELL activity, identify large-value trades, and track overall trading value.
+## Key Features
+- Simulated real-time BTC/USDT trading data
+- Kafka-based streaming pipeline
+- Automatic storage of processed trades in MongoDB Atlas
+- Trade value calculation in USD
+- Identification of large trades above $100,000
+- BUY vs SELL trading analysis
+- Real-time dashboard visualization
